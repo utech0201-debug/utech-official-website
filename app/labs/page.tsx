@@ -1,0 +1,4 @@
+import Link from "next/link";
+import { ArrowLeft, FlaskConical, Terminal, Shield } from "lucide-react";
+const labs=[["Software Lab",Terminal,"Experiment with web apps, APIs and developer tools."],["AI Lab",FlaskConical,"Prototype intelligent workflows and practical AI systems."],["Security Lab",Shield,"Explore defensive security concepts in controlled environments."]];
+export default function Labs(){return <main className="subpage"><Link className="back" href="/">← Back to UTECH</Link><div className="subhero"><span className="eyebrow"><FlaskConical size={15}/> UTECH LABS</span><h1>Ideas become <em>experiments.</em></h1><p>A space for prototypes, technical experiments and projects that may become something bigger.</p></div><section className="featureGrid">{labs.map(([title,Icon,text])=><article key={title as string}><Icon size={28}/><h2>{title as string}</h2><p>{text as string}</p><b>Lab preparing</b></article>)}</section></main>}
