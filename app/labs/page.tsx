@@ -1,6 +1,7 @@
 import Link from "next/link";
+import { BackLink } from "@/components/layout/BackLink";
 import { FlaskConical, Terminal, Shield } from "lucide-react";
 
 type Lab = { title: string; Icon: typeof Terminal; text: string };
 const labs: Lab[] = [{ title: "Software Lab", Icon: Terminal, text: "Experiment with web apps, APIs and developer tools." }, { title: "AI Lab", Icon: FlaskConical, text: "Prototype intelligent workflows and practical AI systems." }, { title: "Security Lab", Icon: Shield, text: "Explore defensive security concepts in controlled environments." }];
-export default function Labs(){return <main className="subpage"><Link className="back" href="/">← Back to UTECH</Link><div className="subhero"><span className="eyebrow"><FlaskConical size={15}/> UTECH LABS</span><h1>Ideas become <em>experiments.</em></h1><p>A space for prototypes, technical experiments and projects that may become something bigger.</p></div><section className="featureGrid">{labs.map(({title,Icon,text})=><article key={title}><Icon size={28}/><h2>{title}</h2><p>{text}</p><b>Lab preparing</b></article>)}</section></main>}
+export default function Labs(){return <main className="subpage"><BackLink /><div className="subhero"><span className="eyebrow"><FlaskConical size={15}/> UTECH LABS</span><h1>Ideas become <em>experiments.</em></h1><p>A space for prototypes, technical experiments and projects that may become something bigger.</p></div><section className="featureGrid">{labs.map(({title,Icon,text})=><article key={title}><Icon size={28}/><h2>{title}</h2><p>{text}</p><b>Lab preparing</b></article>)}</section></main>}
