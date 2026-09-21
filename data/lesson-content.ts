@@ -1,47 +1,39 @@
 export type LessonContent = { title:string; objective:string; explanation:string; challenge:string };
+
 export const lessonContent: Record<string, LessonContent[]> = {
+  "web-foundations": [
+    { title:"HTML structure", objective:"Understand how HTML gives a webpage its structure.", explanation:"HTML uses elements such as headings, paragraphs, links and sections to describe the content and meaning of a page.", challenge:"Create a simple profile page with a heading, short paragraph, image placeholder, link and three-item list." },
+    { title:"CSS layout", objective:"Use CSS to control spacing, sizing and layout.", explanation:"CSS separates presentation from structure. Flexbox and Grid are two core tools for arranging modern interfaces.", challenge:"Build a two-column card layout with consistent spacing and a clear visual hierarchy." },
+    { title:"Responsive design", objective:"Make interfaces adapt to different screen sizes.", explanation:"Responsive design combines flexible layouts, relative sizing and media queries so a page remains usable on phones, tablets and desktops.", challenge:"Take your two-column layout and make it stack into one column on narrow screens." },
+    { title:"JavaScript basics", objective:"Understand variables, values, conditions and functions in JavaScript.", explanation:"JavaScript adds behavior to webpages. Start with variables, basic data types, conditions and reusable functions.", challenge:"Write a function that receives a user's name and returns a personalized welcome message." },
+    { title:"DOM interaction", objective:"Connect JavaScript logic to elements on a webpage.", explanation:"The DOM represents the page as objects that JavaScript can read and update in response to user actions.", challenge:"Create a button that changes a message on the page when it is clicked." },
+    { title:"Build a landing page", objective:"Combine HTML, CSS and JavaScript into a small real project.", explanation:"A landing page is a useful exercise for practicing structure, responsive styling, interaction and polished presentation together.", challenge:"Build a responsive UTECH-style landing page with a hero section, feature cards and one interactive button." }
+  ],
   "python-foundations": [
-    {
-      "title": "Variables & types",
-      "objective": "Understand how Python stores values and how to inspect their types.",
-      "explanation": "A variable gives a value a name. Python determines the type at runtime.",
-      "challenge": "Create variables for your name, age and whether you are learning Python. Print each value and its type."
-    },
-    {
-      "title": "Input & output",
-      "objective": "Collect information from a user and display useful results.",
-      "explanation": "input() reads text from the user. Convert numeric input with int() or float() before arithmetic.",
-      "challenge": "Ask for a person's age and print how old they will be next year."
-    },
-    {
-      "title": "Conditions",
-      "objective": "Make programs choose between different paths.",
-      "explanation": "if, elif and else let a program evaluate conditions and execute the matching block.",
-      "challenge": "Ask for a score and print whether the learner passed or failed."
-    },
-    {
-      "title": "Loops",
-      "objective": "Repeat work without copying the same code.",
-      "explanation": "for and while loops let programs repeat work efficiently.",
-      "challenge": "Print the numbers 1 through 10 and calculate their total."
-    },
-    {
-      "title": "Functions",
-      "objective": "Package reusable logic into named blocks.",
-      "explanation": "Functions reduce repetition. Parameters accept data and return sends a result back.",
-      "challenge": "Write a function that accepts a name and returns a friendly greeting."
-    },
-    {
-      "title": "Collections",
-      "objective": "Store and work with groups of values.",
-      "explanation": "Lists, tuples, sets and dictionaries organize related data in different ways.",
-      "challenge": "Create a list of five technologies you want to learn and loop through it."
-    },
-    {
-      "title": "Mini project",
-      "objective": "Combine the fundamentals into a small working program.",
-      "explanation": "Real learning happens when separate concepts work together.",
-      "challenge": "Build a command-line study tracker that records a learner name and three study topics."
-    }
+    { title:"Variables & types", objective:"Understand how Python stores values and how to inspect their types.", explanation:"A variable gives a value a name. Python determines the type at runtime.", challenge:"Create variables for your name, age and whether you are learning Python. Print each value and its type." },
+    { title:"Input & output", objective:"Collect information from a user and display useful results.", explanation:"input() reads text from the user. Convert numeric input with int() or float() before arithmetic.", challenge:"Ask for a person's age and print how old they will be next year." },
+    { title:"Conditions", objective:"Make programs choose between different paths.", explanation:"if, elif and else let a program evaluate conditions and execute the matching block.", challenge:"Ask for a score and print whether the learner passed or failed." },
+    { title:"Loops", objective:"Repeat work without copying the same code.", explanation:"for and while loops let programs repeat work efficiently.", challenge:"Print the numbers 1 through 10 and calculate their total." },
+    { title:"Functions", objective:"Package reusable logic into named blocks.", explanation:"Functions reduce repetition. Parameters accept data and return sends a result back.", challenge:"Write a function that accepts a name and returns a friendly greeting." },
+    { title:"Collections", objective:"Store and work with groups of values.", explanation:"Lists, tuples, sets and dictionaries organize related data in different ways.", challenge:"Create a list of five technologies you want to learn and loop through it." },
+    { title:"Mini project", objective:"Combine the fundamentals into a small working program.", explanation:"Real learning happens when separate concepts work together.", challenge:"Build a command-line study tracker that records a learner name and three study topics." }
+  ],
+  "networking-core": [
+    { title:"Network basics", objective:"Understand what a computer network is and why networks exist.", explanation:"A network connects devices so they can exchange data and share resources. Clients, servers and communication paths work together.", challenge:"Draw a small home network and label the devices, connection path and shared resource." },
+    { title:"Devices", objective:"Identify the main devices used to connect and move data.", explanation:"Switches connect devices inside a network, routers connect different networks, and access points provide wireless connectivity.", challenge:"Explain the role of a switch, router and access point in a small office." },
+    { title:"Topologies", objective:"Recognize common physical and logical network layouts.", explanation:"Bus, star, ring, mesh and hybrid topologies describe how network nodes and links are organized.", challenge:"Compare star and mesh topologies and give one practical use case for each." },
+    { title:"IP addressing", objective:"Understand the purpose of IP addresses.", explanation:"IP addressing identifies interfaces so devices can communicate across networks. IPv4 uses four numeric octets.", challenge:"Identify the network and host portions of 192.168.1.25/24." },
+    { title:"Protocols", objective:"Understand why networking protocols exist.", explanation:"Protocols define rules for communication. Examples include HTTP, DNS, DHCP, TCP and UDP, each serving different purposes.", challenge:"Describe what DNS does and why a browser needs it when visiting a domain." },
+    { title:"Switching", objective:"Understand how switches forward frames inside a LAN.", explanation:"Ethernet switches learn MAC addresses and use their forwarding table to send frames toward the correct port.", challenge:"Describe what happens when one device sends an Ethernet frame to another device on the same LAN." },
+    { title:"Routing", objective:"Understand how routers move packets between networks.", explanation:"Routers examine destination IP addresses and choose a path using routing information.", challenge:"Explain why a device on 192.168.1.0/24 needs a router to reach 10.0.0.0/24." },
+    { title:"Troubleshooting", objective:"Use a structured process to diagnose network problems.", explanation:"Good troubleshooting starts with symptoms, then checks physical connectivity, configuration, addressing, name resolution and reachability.", challenge:"Create a five-step checklist for diagnosing a laptop that cannot reach a website." }
+  ],
+  "cybersecurity-foundations": [
+    { title:"Security principles", objective:"Learn the core ideas behind protecting information and systems.", explanation:"The CIA triad—confidentiality, integrity and availability—is a foundation for thinking about security controls.", challenge:"Give one example of a control that supports each part of the CIA triad." },
+    { title:"Threats", objective:"Recognize common categories of cybersecurity threats.", explanation:"Threats can include phishing, malware, weak configurations, credential attacks and social engineering.", challenge:"Write three signs that an unexpected message may be a phishing attempt." },
+    { title:"Authentication", objective:"Understand how systems verify identity.", explanation:"Authentication proves who a user is. Strong passwords, password managers and multi-factor authentication reduce account risk.", challenge:"Explain why adding a second authentication factor improves account security." },
+    { title:"Network defense", objective:"Understand basic defensive controls for networks.", explanation:"Firewalls, segmentation, secure protocols, patching and monitoring can reduce exposure and limit the impact of attacks.", challenge:"Design a simple defensive plan for a small office network with staff and guest devices." },
+    { title:"Secure development", objective:"Build security into software from the beginning.", explanation:"Secure development includes input validation, safe authentication, least privilege, dependency management and careful handling of secrets.", challenge:"List five checks you would perform before releasing a small web application." },
+    { title:"Security lab", objective:"Apply defensive thinking in a safe practice environment.", explanation:"Security labs should use systems you own or are explicitly authorized to test. The goal is to understand weaknesses and improve defenses.", challenge:"Create a legal lab checklist covering scope, authorization, test targets, evidence and cleanup." }
   ]
 };
