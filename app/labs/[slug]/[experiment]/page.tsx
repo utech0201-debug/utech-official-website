@@ -1,12 +1,16 @@
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, Beaker, ShieldCheck } from "lucide-react";
+import { ArrowLeft, ArrowRight, Beaker } from "lucide-react";
 import { notFound } from "next/navigation";
 import { labs } from "@/data/labs";
 import { labContent } from "@/data/lab-content";
+import ExperimentViewer from "@/components/labs/ExperimentViewer";
 
 export function generateStaticParams() {
-  return labs.flatMap(lab =>
-    lab.experiments.map((_, index) => ({ slug: lab.slug, experiment: String(index + 1) }))
+  return labs.flatMap((lab) =>
+    lab.experiments.map((_, index) => ({
+      slug: lab.slug,
+      experiment: String(index + 1),
+    })),
   );
 }
 
@@ -16,7 +20,7 @@ export default async function ExperimentPage({
   params: Promise<{ slug: string; experiment: string }>;
 }) {
   const { slug, experiment } = await params;
-  const lab = labs.find(item => item.slug === slug);
+  const lab = labs.find((item) => item.slug === slug);
   const index = Number(experiment) - 1;
   const content = labContent[slug]?.[index];
 
@@ -32,29 +36,19 @@ export default async function ExperimentPage({
       </Link>
 
       <div className="lessonHero">
-        <span className="eyebrow"><Beaker size={15} /> {lab.code} / EXPERIMENT {String(index + 1).padStart(2, "0")}</span>
+        <span className="eyebrow">
+          <Beaker size={15} /> {lab.code} / EXPERIMENT {String(index + 1).padStart(2, "0")}
+        </span>
         <h1>{content.title}</h1>
         <p>{content.objective}</p>
       </div>
 
-      <section className="experimentViewer">
-        <article className="lessonBlock">
-          <span className="sectionLabel">THE BRIEF</span>
-          <p>{content.brief}</p>
-        </article>
-        <article className="challengeBox">
-          <span className="sectionLabel">YOUR TASK</span>
-          <h2>Experiment time.</h2>
-          <p>{content.task}</p>
-        </article>
-        <article className="safetyNote">
-          <ShieldCheck size={19} />
-          <div>
-            <b>Safe experimentation</b>
-            <p>{content.safety}</p>
-          </div>
-        </article>
-      </section>
+      <ExperimentViewer
+        labSlug={slug}
+        experimentIndex={index}
+        totalExperiments={lab.experiments.length}
+        experiment={content}
+      />
 
       <Link className="nextLesson" href={next}>
         {hasNext ? "Next experiment" : "Back to lab"} <ArrowRight size={16} />
