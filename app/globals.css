@@ -13,3 +13,6 @@
 .experimentViewer .lessonBlock p,.experimentViewer .challengeBox p{color:#b9c8dc;line-height:1.9;margin:15px 0 0}
 .progressPanel+.progressPanel{margin-top:45px}
 @media(max-width:800px){.safetyNote{padding:22px}.experimentViewer .lessonBlock,.experimentViewer .challengeBox{padding:22px}}
+
+.nav nav{align-items:center}.navCta{white-space:nowrap}.navCta svg:first-child{color:var(--green)}
+@media(max-width:1050px){.nav nav a:last-child{display:none}.navCta{font-size:12px}}
