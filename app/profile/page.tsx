@@ -61,7 +61,12 @@ export default async function ProfilePage() {
       <Link className="back" href="/dashboard">← Back to dashboard</Link>
       <section className="profileHero">
         <div className="profileIdentity">
-          <div className="profileAvatar">{profile?.avatar_url ? <img src={profile.avatar_url} alt="" /> : initials}</div>
+          <div
+            className="profileAvatar"
+            role={profile?.avatar_url ? "img" : undefined}
+            aria-label={profile?.avatar_url ? displayName + " avatar" : undefined}
+            style={profile?.avatar_url ? { backgroundImage: "url(" + profile.avatar_url + ")" } : undefined}
+          >{profile?.avatar_url ? null : initials}</div>
           <div>
             <span className="eyebrow"><UserCircle size={15} /> UTECH BUILDER PROFILE</span>
             <h1>{displayName}</h1>
