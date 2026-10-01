@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Award, BookOpen, FlaskConical, ShieldCheck, UserCircle } from "lucide-react";
+import { ArrowRight, Award, BookOpen, Code2, FlaskConical, FolderKanban, ShieldCheck, Sparkles, UserCircle } from "lucide-react";
 import { createClient } from "@/lib/supabase/server";
 import { courses } from "@/data/courses";
 import { labs } from "@/data/labs";
@@ -21,7 +21,7 @@ export default async function ProfilePage() {
         <div className="authCard">
           <span className="eyebrow"><UserCircle size={15} /> UTECH BUILDER IDENTITY</span>
           <h1>Sign in to build your profile.</h1>
-          <p>Your UTECH identity connects your learning, labs, achievements and future projects.</p>
+          <p>Your UTECH identity connects what you learn, what you build, what you explore and what you contribute across the ecosystem.</p>
           <Link className="primary" href="/login">Open UTECH login <ArrowRight size={15} /></Link>
         </div>
       </main>
@@ -77,13 +77,21 @@ export default async function ProfilePage() {
       </section>
 
       <section className="profileStats">
-        <div><BookOpen size={18} /><b>{completedLessons}</b><span>Lessons completed</span></div>
+        <div><Code2 size={18} /><b>BUILDER</b><span>UTECH identity</span></div>
+        <div><BookOpen size={18} /><b>{completedLessons}</b><span>Learning activity</span></div>
         <div><FlaskConical size={18} /><b>{(experimentProgress ?? []).length}</b><span>Lab experiments</span></div>
         <div><Award size={18} /><b>{achievements.filter((item) => item.earned).length}</b><span>Achievements</span></div>
       </section>
 
       <section className="profileLayout">
         <div className="profileMain">
+          <div className="sectionLabel">BUILDER SNAPSHOT</div>
+          <div className="builderSnapshot">
+            <article><Code2 size={20} /><div><span>IDENTITY</span><h2>Builder</h2><p>Your UTECH identity is designed to grow beyond courses into the work you create.</p></div></article>
+            <article><FolderKanban size={20} /><div><span>PROJECTS</span><h2>Build history</h2><p>Projects, case studies and shipped work will become part of your UTECH identity.</p><Link href="/projects">Explore projects →</Link></div></article>
+            <article><Sparkles size={20} /><div><span>CONTRIBUTIONS</span><h2>More than progress</h2><p>Skills, experiments, contributions and achievements will eventually form your wider builder reputation.</p></div></article>
+          </div>
+
           <div className="sectionLabel">ACHIEVEMENTS</div>
           <div className="achievementGrid">
             {achievements.map(({ icon: Icon, title, earned, detail }) => (
@@ -95,7 +103,7 @@ export default async function ProfilePage() {
             ))}
           </div>
 
-          <div className="sectionLabel profileProgressLabel">BUILDER PROGRESS</div>
+          <div className="sectionLabel profileProgressLabel">LEARNING & LAB ACTIVITY</div>
           <div className="profileProgressGrid">
             {courses.map((course) => {
               const item = courseMap.get(course.slug);
@@ -121,9 +129,10 @@ export default async function ProfilePage() {
             initialAvatarUrl={profile?.avatar_url ?? ""}
           />
           <div className="profileFuture">
-            <span>COMING NEXT</span>
-            <h3>Projects & skills</h3>
-            <p>Your profile will become the home for projects, technical skills, milestones and the wider UTECH builder reputation system.</p>
+            <span>UTECH IDENTITY</span>
+            <h3>Build beyond the dashboard.</h3>
+            <p>Your profile is the foundation for a wider identity system spanning projects, technical skills, experiments, achievements and contributions.</p>
+            <Link href="/projects">View the ecosystem <ArrowRight size={15} /></Link>
           </div>
         </aside>
       </section>
