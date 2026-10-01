@@ -30,6 +30,21 @@ export default function Home() {
     <section id="mission" className="mission"><div className="sectionLabel">01 / THE VISION</div><div><h2>One ecosystem.<br/><span>Many ways to build.</span></h2><p>UTECH exists to make technology practical, creative and accessible. It brings learning, engineering, AI, cybersecurity, experimentation and products into one evolving ecosystem—so an idea can move from curiosity to prototype to real-world system.</p></div></section>
     <section className="pillars"><div className="sectionLabel">02 / WHAT UTECH BUILDS</div><div className="cards">{focus.map(({icon:Icon,title,text})=><article className="card" key={title}><div className="icon"><Icon size={23}/></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
     <section id="ecosystem" className="ecosystem"><div className="sectionLabel">03 / THE UTECH ECOSYSTEM</div><div className="ecoIntro"><Cpu size={34}/><div><h2>Everything connects here.</h2><p>UTECH is the headquarters. Each division has a purpose, but they share the same foundation.</p></div></div><div className="ecoGrid">{ecosystem.map(item=><Link className="ecoCard" href={item.href} key={item.title}><span>{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><b>{item.action} →</b></Link>)}</div></section>
+    <section className="coreSection">
+      <div className="coreHeader">
+        <div className="sectionLabel">04 / UTECH CORE</div>
+        <div><h2>The command center<br/><span>of the ecosystem.</span></h2><p>One foundation connects every UTECH division. Explore the systems, capabilities and spaces growing around the core.</p></div>
+      </div>
+      <div className="coreMap">
+        <div className="coreCenter"><Layers3 size={25}/><b>UTECH</b><small>CORE SYSTEM</small></div>
+        <Link href="/technology" className="coreNode coreNodeA"><Code2 size={19}/><strong>Technology</strong><span>Engineering · Hardware</span></Link>
+        <Link href="/labs/ai-lab" className="coreNode coreNodeB"><BrainCircuit size={19}/><strong>AI</strong><span>Intelligence · Automation</span></Link>
+        <Link href="/labs/security-lab" className="coreNode coreNodeC"><ShieldCheck size={19}/><strong>Security</strong><span>Defense · Research</span></Link>
+        <Link href="/learning" className="coreNode coreNodeD"><GraduationCap size={19}/><strong>Learning</strong><span>Skills · Knowledge</span></Link>
+        <Link href="/projects" className="coreNode coreNodeE"><Rocket size={19}/><strong>Projects</strong><span>Build · Ship · Iterate</span></Link>
+        <Link href="/store" className="coreNode coreNodeF"><Store size={19}/><strong>Products</strong><span>Tools · Hardware</span></Link>
+      </div>
+    </section>
     <section className="platformSection"><div className="platformCopy"><div className="sectionLabel">04 / THE PLATFORM</div><h2>Learn something.<br/><span>Build something.</span><br/>Ship something.</h2><p>UTECH is being designed as a connected platform, not a collection of isolated pages. Your identity, projects, skills, experiments and future contributions can grow with the ecosystem.</p><Link className="primary" href="/profile">Explore Builder Identity <ArrowRight size={18}/></Link></div><div className="platformVisual"><div className="platformNode main"><Layers3 size={22}/><b>UTECH</b><small>CORE</small></div><div className="platformNode nodeA"><Code2 size={18}/> Software</div><div className="platformNode nodeB"><BrainCircuit size={18}/> AI</div><div className="platformNode nodeC"><ShieldCheck size={18}/> Security</div><div className="platformNode nodeD"><GraduationCap size={18}/> Learning</div><div className="platformNode nodeE"><Store size={18}/> Products</div></div></section>
     <section className="start"><div className="sectionLabel">05 / START HERE</div><h2>There is always something to build.</h2><p>Explore the ecosystem, follow a project, enter a lab, learn a skill or start building your own.</p><div className="actions"><Link className="primary" href="/projects">Explore projects <ArrowRight size={18}/></Link><Link className="secondary" href="/labs">Enter UTECH Labs</Link></div></section>
     <Footer/>
