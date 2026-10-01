@@ -68,7 +68,7 @@ export default async function Dashboard() {
           <h1>Welcome back.</h1>
           <p>{claims.email}</p>
         </div>
-        <Link className="back" href="/">← UTECH home</Link>
+        <div className="dashboardActions"><Link className="back" href="/">← UTECH home</Link><Link className="secondary" href="/profile"><UserCircle size={15} /> Builder Profile</Link></div>
       </div>
 
       <section className="dashboardGrid">
