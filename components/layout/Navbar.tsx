@@ -14,6 +14,7 @@ export default function Navbar() {
         <Link href="/store">Store</Link>
         <a href="/#mission">Mission</a>
         <Link href="/dashboard">Dashboard</Link>
+        <Link href="/profile">Profile</Link>
       </nav>
 
       <Link className="navCta" href="/dashboard">
