@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -19,7 +20,7 @@ const ecosystem = [
 export default function Home() {
   return <main>
     <Navbar />
-    <section className="hero"><div className="orb orb1"/><div className="orb orb2"/><div className="heroGrid"/>
+    <section className="hero"><div className="orb orb1"/><div className="orb orb2"/><div className="heroGrid"/><div className="heroVisual" aria-hidden="true"><Image src="/visuals/utech-core-hero.svg" alt="" fill priority sizes="(max-width: 800px) 100vw, 760px" /></div>
       <div className="heroInner"><div className="eyebrow"><Sparkles size={15}/> THE OFFICIAL UTECH HEADQUARTERS</div>
         <h1>Technology.<br/><em>Built without limits.</em></h1>
         <p>UTECH is a technology ecosystem for people who learn, build, experiment and create. Software, AI, cybersecurity, research, products and community—connected under one vision.</p>
