@@ -25,3 +25,50 @@
 @media(max-width:800px){.platformSection{grid-template-columns:1fr;padding-top:80px;padding-bottom:80px;gap:35px}.platformVisual{min-height:360px}.platformNode{font-size:10px;padding:9px 10px}.platformNode.main{width:85px;height:85px}.projectShowcase{grid-template-columns:1fr}.projectCard h2{font-size:23px}.pageCta{flex-direction:column}.pageCta .primary{width:max-content}.nodeA{left:4%}.nodeB{right:4%}.nodeC{left:2%}.nodeD{right:2%}}
 
 .coreSection{max-width:1280px;margin:0 auto;padding:115px 8vw 80px}.coreHeader{display:grid;grid-template-columns:.65fr 1.35fr;gap:50px;align-items:start}.coreHeader h2{font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-.055em;margin:0 0 20px}.coreHeader h2 span{color:#4db8ff}.coreHeader p{max-width:650px;color:var(--muted);line-height:1.8;font-size:16px}.coreMap{position:relative;min-height:570px;margin-top:65px;border:1px solid var(--line);border-radius:30px;background:radial-gradient(circle at center,rgba(25,78,123,.4),rgba(5,17,34,.9) 58%);overflow:hidden}.coreMapVisual{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover;opacity:.72;pointer-events:none;z-index:1}.coreMap:after{z-index:2}.coreMap:before,.coreMap:after{content:"";position:absolute;left:50%;top:50%;border:1px dashed rgba(91,188,255,.18);border-radius:50%;transform:translate(-50%,-50%)}.coreMap:before{width:340px;height:340px}.coreMap:after{width:500px;height:500px;border-color:rgba(69,230,165,.1)}.coreCenter{position:absolute;z-index:4;left:50%;top:50%;width:128px;height:128px;transform:translate(-50%,-50%);display:grid;place-items:center;align-content:center;gap:5px;border:1px solid rgba(69,230,165,.45);border-radius:50%;background:rgba(4,18,34,.96);box-shadow:0 0 60px rgba(45,181,159,.16)}.coreCenter svg{color:#5bbcff}.coreCenter b{font-family:'Space Grotesk';font-size:20px}.coreCenter small{font-size:8px;letter-spacing:.18em;color:#7f92ad}.coreNode{position:absolute;z-index:5;width:185px;padding:17px;border:1px solid var(--line);border-radius:16px;background:rgba(6,19,37,.92);color:var(--white);text-decoration:none;box-shadow:0 15px 35px rgba(0,0,0,.2);transition:transform .2s,border-color .2s}.coreNode:hover{transform:translateY(-4px);border-color:rgba(69,230,165,.4)}.coreNode svg{color:var(--green);margin-bottom:10px}.coreNode strong,.coreNode span{display:block}.coreNode strong{font-size:15px}.coreNode span{margin-top:5px;color:var(--muted);font-size:10px}.coreNodeA{left:7%;top:13%}.coreNodeB{right:7%;top:13%}.coreNodeC{left:3%;bottom:13%}.coreNodeD{right:3%;bottom:13%}.coreNodeE{left:31%;bottom:4%}.coreNodeF{right:31%;bottom:4%}@media(max-width:800px){.coreSection{padding:80px 6vw 55px}.coreHeader{grid-template-columns:1fr;gap:22px}.coreMap{min-height:720px;margin-top:40px}.coreMap:before{width:250px;height:250px}.coreMap:after{width:330px;height:330px}.coreNode{width:145px;padding:13px}.coreNodeA{left:4%;top:8%}.coreNodeB{right:4%;top:8%}.coreNodeC{left:4%;bottom:22%}.coreNodeD{right:4%;bottom:22%}.coreNodeE{left:4%;bottom:5%}.coreNodeF{right:4%;bottom:5%}.coreCenter{width:105px;height:105px}}@media(max-width:800px){.ecoIntroCopy{align-items:flex-start;flex-direction:column;gap:14px}.ecoIntro{min-height:250px}.ecoNetworkVisual{opacity:.38}}.labHero{max-width:1180px;display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.labHeroVisual{position:relative;min-height:330px;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:radial-gradient(circle at center,rgba(20,67,108,.3),rgba(5,17,34,.72))}.labHeroVisual img{object-fit:cover;opacity:.82}.labHeroVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,18,37,.08),transparent 50%,rgba(6,18,37,.12));pointer-events:none}@media(max-width:800px){.labHero{grid-template-columns:1fr;gap:30px}.labHeroVisual{min-height:250px}.labHeroVisual img{object-fit:cover}}
+/* Homepage layout polish */
+.mission{max-width:1280px;margin:0 auto;padding:120px 8vw 80px}
+.missionContent{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:55px;align-items:center}
+.missionCopy h2{font-size:clamp(40px,5vw,68px);line-height:1;letter-spacing:-.055em;margin:20px 0}
+.missionCopy h2 span{color:#4db8ff}
+.missionCopy p{max-width:620px;color:var(--muted);line-height:1.8;font-size:17px}
+.missionVisual{position:relative;min-height:330px;border:1px solid var(--line);border-radius:26px;background:radial-gradient(circle at center,rgba(20,67,108,.32),rgba(5,17,34,.72));overflow:hidden}
+.missionVisual img{object-fit:cover;opacity:.82}
+.missionVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,18,37,.2),transparent 35%,rgba(6,18,37,.12));pointer-events:none}
+
+.pillars{max-width:1280px;margin:0 auto;padding:80px 8vw 105px}
+.buildIntro{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:55px;align-items:center;margin:28px 0 55px}
+.buildIntro h2{font-size:clamp(40px,4.5vw,60px);line-height:1;letter-spacing:-.05em;margin:0 0 22px}
+.buildIntro h2 span{color:#4db8ff}
+.buildIntro p{color:var(--muted);line-height:1.8;max-width:470px;margin:0}
+.buildVisual{position:relative;min-height:300px;border:1px solid var(--line);border-radius:26px;overflow:hidden;background:radial-gradient(circle at center,rgba(20,67,108,.32),rgba(5,17,34,.76))}
+.buildVisual img{object-fit:cover;opacity:.82}
+
+.ecosystem{max-width:1280px;margin:0 auto;padding:90px 8vw 115px}
+.ecoGrid{grid-template-columns:repeat(4,1fr)}
+.ecoCard{min-width:0}
+
+.heroVisual{width:min(680px,58vw);height:min(560px,56vw);right:-3%;opacity:.46}
+.heroInner{max-width:820px}
+.hero{min-height:790px}
+
+@media(max-width:1100px){
+  .ecoGrid{grid-template-columns:repeat(2,1fr)}
+  .buildIntro{grid-template-columns:1fr 1.25fr;gap:35px}
+  .heroVisual{right:-12%;opacity:.34}
+}
+@media(max-width:800px){
+  .hero{min-height:760px}
+  .heroVisual{width:100vw;height:78vw;right:50%;top:45%;opacity:.26}
+  .heroInner{padding:120px 22px 55px}
+  .mission,.pillars,.ecosystem{padding-left:6vw;padding-right:6vw}
+  .mission{padding-top:85px;padding-bottom:70px}
+  .missionContent{grid-template-columns:1fr;gap:30px}
+  .missionCopy h2{font-size:clamp(40px,12vw,58px)}
+  .missionVisual{min-height:260px}
+  .pillars{padding-top:70px;padding-bottom:80px}
+  .buildIntro{grid-template-columns:1fr;gap:30px;margin-bottom:40px}
+  .buildVisual{min-height:240px}
+  .ecosystem{padding-top:70px;padding-bottom:85px}
+  .ecoGrid{grid-template-columns:1fr}
+  .ecoCard p{min-height:0}
+}
