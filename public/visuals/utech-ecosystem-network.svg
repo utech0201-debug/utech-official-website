@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" fill="none">
+<defs><linearGradient id="g" x1="80" y1="80" x2="1120" y2="380"><stop stop-color="#37a8ff"/><stop offset="1" stop-color="#45e6a5"/></linearGradient><radialGradient id="r"><stop stop-color="#37a8ff" stop-opacity=".22"/><stop offset="1" stop-color="#061225" stop-opacity="0"/></radialGradient></defs>
+<ellipse cx="600" cy="230" rx="420" ry="180" fill="url(#r)"/>
+<g stroke="url(#g)" stroke-opacity=".3" stroke-width="1.5"><path d="M600 230H145M600 230H385M600 230H815M600 230H1055"/><path d="M145 230Q270 80 385 230Q490 370 600 230Q710 90 815 230Q930 380 1055 230"/></g>
+<g fill="#061225" stroke="url(#g)" stroke-width="2">
+<rect x="72" y="174" width="146" height="112" rx="18"/><rect x="312" y="174" width="146" height="112" rx="18"/><rect x="527" y="169" width="146" height="122" rx="20"/><rect x="742" y="174" width="146" height="112" rx="18"/><rect x="982" y="174" width="146" height="112" rx="18"/>
+</g>
+<g fill="#b9c8dc" font-family="Arial,sans-serif" text-anchor="middle"><text x="145" y="215" font-size="14">LABS</text><text x="145" y="237" fill="#5bbcff" font-size="10">EXPERIMENT</text><text x="385" y="215" font-size="14">LEARNING</text><text x="385" y="237" fill="#5bbcff" font-size="10">GROW</text><text x="600" y="215" fill="white" font-size="17" font-weight="700">UTECH</text><text x="600" y="239" fill="#45e6a5" font-size="10" letter-spacing="2">HEADQUARTERS</text><text x="815" y="215" font-size="14">PROJECTS</text><text x="815" y="237" fill="#45e6a5" font-size="10">BUILD</text><text x="1055" y="215" font-size="14">STORE</text><text x="1055" y="237" fill="#5bbcff" font-size="10">PRODUCTS</text></g>
+<g fill="#45e6a5"><circle cx="145" cy="230" r="4"/><circle cx="385" cy="230" r="4"/><circle cx="815" cy="230" r="4"/><circle cx="1055" cy="230" r="4"/></g>
+</svg>
