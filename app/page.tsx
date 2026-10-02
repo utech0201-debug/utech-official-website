@@ -91,7 +91,25 @@ export default function Home() {
         <div className="platformNode nodeE"><Store size={18}/> Products</div>
       </div>
     </section>
-    <section className="start"><div className="startVisual"><Image src="/visuals/utech-start-here.svg" alt="" fill sizes="(max-width: 800px) 100vw, 1200px" aria-hidden="true"/></div><div className="startContent"><div className="sectionLabel">06 / START HERE</div><h2>There is always something to build.</h2><p>Explore the ecosystem, follow a project, enter a lab, learn a skill or start building your own.</p><div className="actions"><Link className="primary" href="/projects">Explore projects <ArrowRight size={18}/></Link><Link className="secondary" href="/labs">Enter UTECH Labs</Link></div></div></section>
+    <section className="start">
+      <div className="startVisual">
+        <Image src="/visuals/utech-start-here.svg" alt="" fill sizes="(max-width: 800px) 100vw, 1200px" aria-hidden="true"/>
+        <div className="startVisualLabel">ENTRY POINTS · UTECH ECOSYSTEM</div>
+        <div className="startOrbitLabel startOrbitLabelA">EXPLORE</div>
+        <div className="startOrbitLabel startOrbitLabelB">LEARN</div>
+        <div className="startOrbitLabel startOrbitLabelC">BUILD</div>
+      </div>
+      <div className="startContent">
+        <div className="sectionLabel">06 / START HERE</div>
+        <div className="startSignal"><span /> YOUR NEXT MOVE STARTS HERE</div>
+        <h2>There is always something to build.</h2>
+        <p>Explore the ecosystem, follow a project, enter a lab, learn a skill or start building your own.</p>
+        <div className="actions">
+          <Link className="primary" href="/projects">Explore projects <ArrowRight size={18}/></Link>
+          <Link className="secondary" href="/labs">Enter UTECH Labs</Link>
+        </div>
+      </div>
+    </section>
     <Footer/>
   </main>;
 }
