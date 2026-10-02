@@ -192,3 +192,35 @@
   .platformNode.main{width:108px;height:108px}
   .platformNode.nodeA,.platformNode.nodeB,.platformNode.nodeC,.platformNode.nodeD,.platformNode.nodeE{padding:11px 12px;font-size:11px}
 }
+
+/* Start Here entry-point redesign */
+.start{position:relative;max-width:1280px;min-height:620px;margin:0 auto;padding:95px 8vw 120px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:70px;align-items:center;overflow:hidden}
+.startVisual{position:relative;min-height:500px;border:1px solid var(--line);border-radius:30px;overflow:hidden;background:radial-gradient(circle at center,rgba(18,72,119,.42),rgba(5,17,34,.96) 67%);order:1;box-shadow:inset 0 0 70px rgba(0,0,0,.2)}
+.startVisual img{object-fit:cover;opacity:.72}
+.startVisual:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,17,34,.05),rgba(5,17,34,.2) 60%,rgba(5,17,34,.5));pointer-events:none}
+.startVisualLabel{position:absolute;z-index:5;left:22px;bottom:18px;color:#708aa5;font-size:8px;letter-spacing:.15em}
+.startOrbitLabel{position:absolute;z-index:5;padding:6px 8px;border:1px solid rgba(91,188,255,.2);border-radius:999px;background:rgba(6,18,37,.78);backdrop-filter:blur(8px);font-size:8px;letter-spacing:.14em;color:#9ec8e6}
+.startOrbitLabelA{top:22%;right:14%}.startOrbitLabelB{top:50%;left:10%}.startOrbitLabelC{bottom:20%;right:18%}
+.startContent{position:relative;z-index:3;order:2}
+.startSignal{display:inline-flex;align-items:center;gap:9px;margin-top:22px;padding:7px 10px;border:1px solid rgba(69,230,165,.2);border-radius:999px;color:#7fdbb7;background:rgba(69,230,165,.05);font-size:9px;letter-spacing:.15em;font-weight:700}
+.startSignal span{width:6px;height:6px;border-radius:50%;background:var(--green);box-shadow:0 0 10px rgba(69,230,165,.8)}
+.startContent h2{font-size:clamp(44px,5.1vw,70px);line-height:.97;letter-spacing:-.06em;margin:24px 0 22px}
+.startContent p{max-width:560px;color:var(--muted);font-size:16px;line-height:1.8;margin-bottom:30px}
+.start .actions{display:flex;flex-wrap:wrap;gap:12px}
+.start .primary,.start .secondary{display:inline-flex;align-items:center;gap:9px}
+@media(max-width:900px){
+  .start{grid-template-columns:1fr;gap:32px;padding:80px 6vw 90px}
+  .startVisual{min-height:430px;order:1}
+  .startContent{order:2}
+}
+@media(max-width:800px){
+  .startVisual{min-height:360px;border-radius:26px}
+  .startVisual img{opacity:.5}
+  .startVisualLabel{left:18px;bottom:14px;font-size:7px}
+  .startOrbitLabelA{top:17%;right:9%}.startOrbitLabelB{top:47%;left:7%}.startOrbitLabelC{bottom:16%;right:10%}
+  .startContent h2{font-size:clamp(40px,11vw,58px)}
+  .startContent p{font-size:14px;line-height:1.7}
+  .startSignal{margin-top:18px}
+  .start .actions{width:100%}
+  .start .actions a{justify-content:center}
+}
