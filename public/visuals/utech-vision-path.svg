@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" fill="none">
+<defs><linearGradient id="g" x1="100" y1="420" x2="1100" y2="80"><stop stop-color="#37a8ff"/><stop offset=".55" stop-color="#45e6a5"/><stop offset="1" stop-color="#37a8ff"/></linearGradient><radialGradient id="gl"><stop stop-color="#45e6a5" stop-opacity=".3"/><stop offset="1" stop-color="#45e6a5" stop-opacity="0"/></radialGradient></defs>
+<circle cx="600" cy="270" r="220" fill="url(#gl)" opacity=".35"/>
+<path d="M110 405C270 355 300 250 450 275C575 296 615 370 730 300C840 234 880 125 1090 95" stroke="url(#g)" stroke-width="3" stroke-linecap="round"/>
+<path d="M110 405C270 355 300 250 450 275C575 296 615 370 730 300C840 234 880 125 1090 95" stroke="url(#g)" stroke-width="18" stroke-opacity=".08" stroke-linecap="round"/>
+<g fill="#061225" stroke="url(#g)" stroke-width="2"><circle cx="110" cy="405" r="28"/><circle cx="450" cy="275" r="28"/><circle cx="730" cy="300" r="28"/><circle cx="1090" cy="95" r="28"/></g>
+<g fill="#45e6a5"><circle cx="110" cy="405" r="6"/><circle cx="450" cy="275" r="6"/><circle cx="730" cy="300" r="6"/><circle cx="1090" cy="95" r="6"/></g>
+<g fill="#aebfd5" font-family="Arial,sans-serif"><text x="70" y="458" font-size="15">CURIOSITY</text><text x="405" y="235" font-size="15">LEARNING</text><text x="695" y="260" font-size="15">BUILDING</text><text x="970" y="62" font-size="15">IMPACT</text></g>
+<g stroke="#37a8ff" stroke-opacity=".18"><circle cx="600" cy="270" r="150"/><circle cx="600" cy="270" r="205"/></g>
+</svg>
