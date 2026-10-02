@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" fill="none">
+<defs>
+ <radialGradient id="a"><stop stop-color="#37a8ff" stop-opacity=".28"/><stop offset=".55" stop-color="#45e6a5" stop-opacity=".05"/><stop offset="1" stop-color="#061225" stop-opacity="0"/></radialGradient>
+ <linearGradient id="b" x1="120" y1="80" x2="780" y2="540"><stop stop-color="#37a8ff"/><stop offset="1" stop-color="#45e6a5"/></linearGradient>
+ <filter id="glow"><feGaussianBlur stdDeviation="8"/></filter>
+</defs>
+<circle cx="450" cy="310" r="230" fill="url(#a)" filter="url(#glow)"/>
+<circle cx="450" cy="310" r="150" stroke="#37a8ff" stroke-opacity=".16" stroke-dasharray="4 9"/>
+<circle cx="450" cy="310" r="230" stroke="#45e6a5" stroke-opacity=".10" stroke-dasharray="2 12"/>
+<g stroke="url(#b)" stroke-opacity=".55" stroke-width="1.4">
+<path d="M450 310 180 145M450 310 720 145M450 310 120 390M450 310 780 390M450 310 265 535M450 310 635 535"/>
+</g>
+<g fill="#061225" stroke="url(#b)" stroke-width="1.5">
+<rect x="120" y="112" width="120" height="66" rx="14"/><rect x="660" y="112" width="120" height="66" rx="14"/>
+<rect x="60" y="357" width="145" height="66" rx="14"/><rect x="695" y="357" width="145" height="66" rx="14"/>
+<rect x="205" y="502" width="120" height="66" rx="14"/><rect x="575" y="502" width="120" height="66" rx="14"/>
+</g>
+<g fill="#b9c8dc" font-family="Arial,sans-serif" font-size="13" text-anchor="middle">
+<text x="180" y="140">IDENTITY</text><text x="180" y="159" fill="#5bbcff" font-size="10">YOUR PROFILE</text>
+<text x="720" y="140">LEARNING</text><text x="720" y="159" fill="#5bbcff" font-size="10">YOUR SKILLS</text>
+<text x="132" y="385">PROJECTS</text><text x="132" y="404" fill="#45e6a5" font-size="10">YOUR BUILDS</text>
+<text x="768" y="385">EXPERIMENTS</text><text x="768" y="404" fill="#45e6a5" font-size="10">YOUR LABS</text>
+<text x="265" y="530">TOOLS</text><text x="265" y="549" fill="#5bbcff" font-size="10">YOUR STACK</text>
+<text x="635" y="530">PRODUCTS</text><text x="635" y="549" fill="#5bbcff" font-size="10">YOUR OUTPUT</text>
+</g>
+<circle cx="450" cy="310" r="92" fill="#061225" stroke="url(#b)" stroke-width="2"/>
+<circle cx="450" cy="310" r="70" stroke="#37a8ff" stroke-opacity=".18"/>
+<text x="450" y="306" fill="white" font-family="Arial,sans-serif" font-size="24" font-weight="700" text-anchor="middle">UTECH</text>
+<text x="450" y="328" fill="#45e6a5" font-family="Arial,sans-serif" font-size="10" letter-spacing="3" text-anchor="middle">PLATFORM</text>
+</svg>
