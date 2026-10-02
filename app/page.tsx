@@ -52,12 +52,18 @@ export default function Home() {
     </section>
     <section className="coreSection">
       <div className="coreHeader">
-        <div className="sectionLabel">04 / UTECH CORE</div>
-        <div><h2>The command center<br/><span>of the ecosystem.</span></h2><p>One foundation connects every UTECH division. Explore the systems, capabilities and spaces growing around the core.</p></div>
+        <div>
+          <div className="sectionLabel">04 / UTECH CORE</div>
+          <div className="coreSignal"><span /> CORE SYSTEM ONLINE</div>
+        </div>
+        <div>
+          <h2>The command center<br/><span>of the ecosystem.</span></h2>
+          <p>One foundation connects every UTECH division. Explore the systems, capabilities and spaces growing around the core.</p>
+        </div>
       </div>
       <div className="coreMap">
         <Image className="coreMapVisual" src="/visuals/utech-core-map.svg" alt="" fill sizes="(max-width: 800px) 100vw, 1280px" aria-hidden="true" />
-        <div className="coreCenter"><Layers3 size={25}/><b>UTECH</b><small>CORE SYSTEM</small></div>
+        <div className="coreCenter"><div className="corePulse"><Layers3 size={25}/></div><b>UTECH</b><small>CORE SYSTEM</small><span>CONNECTED</span></div>
         <Link href="/technology" className="coreNode coreNodeA"><Code2 size={19}/><strong>Technology</strong><span>Engineering · Hardware</span></Link>
         <Link href="/labs/ai-lab" className="coreNode coreNodeB"><BrainCircuit size={19}/><strong>AI</strong><span>Intelligence · Automation</span></Link>
         <Link href="/labs/security-lab" className="coreNode coreNodeC"><ShieldCheck size={19}/><strong>Security</strong><span>Defense · Research</span></Link>
