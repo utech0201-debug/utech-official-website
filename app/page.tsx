@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import { ArrowRight, BrainCircuit, Code2, Cpu, GraduationCap, Layers3, Rocket, ShieldCheck, Sparkles, Store } from "lucide-react";
+import { ArrowRight, BrainCircuit, Code2, Cpu, FlaskConical, GraduationCap, Layers3, Rocket, ShieldCheck, Sparkles, Store } from "lucide-react";
 
 const focus = [
   { icon: Code2, title: "Software & Engineering", text: "Design, build and ship useful software, developer tools and digital experiences." },
@@ -11,10 +11,10 @@ const focus = [
   { icon: Rocket, title: "Innovation & R&D", text: "Turn experiments, prototypes and ambitious ideas into things worth building." },
 ];
 const ecosystem = [
-  { number: "01", title: "UTECH Labs", text: "The technical workspace for software, AI, cybersecurity and future R&D.", href: "/labs", action: "Enter Labs" },
-  { number: "02", title: "Learning Hub", text: "Structured learning, practical lessons and hands-on technical growth.", href: "/learning", action: "Explore Learning" },
-  { number: "03", title: "Projects", text: "Real products, experiments, open-source work and systems being built by UTECH.", href: "/projects", action: "View Projects" },
-  { number: "04", title: "Store", text: "A future home for UTECH tools, templates, hardware and digital products.", href: "/store", action: "Explore Store" },
+  { number: "01", tag: "EXPERIMENT", title: "UTECH Labs", text: "The technical workspace for software, AI, cybersecurity and future R&D.", href: "/labs", action: "Enter Labs", icon: FlaskConical },
+  { number: "02", tag: "LEARN", title: "Learning Hub", text: "Structured learning, practical lessons and hands-on technical growth.", href: "/learning", action: "Explore Learning", icon: GraduationCap },
+  { number: "03", tag: "BUILD", title: "Projects", text: "Real products, experiments, open-source work and systems being built by UTECH.", href: "/projects", action: "View Projects", icon: Rocket },
+  { number: "04", tag: "SHIP", title: "Store", text: "A future home for UTECH tools, templates, hardware and digital products.", href: "/store", action: "Explore Store", icon: Store },
 ];
 
 export default function Home() {
@@ -30,7 +30,26 @@ export default function Home() {
     </section>
     <section id="mission" className="mission"><div className="sectionLabel">01 / THE VISION</div><div className="missionContent"><div className="missionCopy"><h2>One ecosystem.<br/><span>Many ways to build.</span></h2><p>UTECH exists to make technology practical, creative and accessible. It brings learning, engineering, AI, cybersecurity, experimentation and products into one evolving ecosystem—so an idea can move from curiosity to prototype to real-world system.</p></div><div className="missionVisual"><Image src="/visuals/utech-vision-path.svg" alt="" fill sizes="(max-width: 800px) 100vw, 620px" aria-hidden="true"/></div></div></section>
     <section className="pillars"><div className="sectionLabel">02 / WHAT UTECH BUILDS</div><div className="buildIntro"><div><h2>Four directions.<br/><span>One build engine.</span></h2><p>Different disciplines, one shared practice: learn deeply, experiment responsibly and turn ideas into working systems.</p></div><div className="buildVisual"><Image src="/visuals/utech-build-engine.svg" alt="" fill sizes="(max-width: 800px) 100vw, 900px" aria-hidden="true"/></div></div><div className="cards">{focus.map(({icon:Icon,title,text})=><article className="card" key={title}><div className="icon"><Icon size={23}/></div><h3>{title}</h3><p>{text}</p></article>)}</div></section>
-    <section id="ecosystem" className="ecosystem"><div className="sectionLabel">03 / THE UTECH ECOSYSTEM</div><div className="ecoIntro"><Image className="ecoNetworkVisual" src="/visuals/utech-ecosystem-network.svg" alt="" fill sizes="(max-width: 800px) 100vw, 1100px" aria-hidden="true" /><div className="ecoIntroCopy"><Cpu size={34}/><div><h2>Everything connects here.</h2><p>UTECH is the headquarters. Each division has a purpose, but they share the same foundation.</p></div></div></div><div className="ecoGrid">{ecosystem.map(item=><Link className="ecoCard" href={item.href} key={item.title}><span>{item.number}</span><h3>{item.title}</h3><p>{item.text}</p><b>{item.action} →</b></Link>)}</div></section>
+    <section id="ecosystem" className="ecosystem">
+      <div className="sectionLabel">03 / THE UTECH ECOSYSTEM</div>
+      <div className="ecoSystemPanel">
+        <Image className="ecoNetworkVisual" src="/visuals/utech-ecosystem-network.svg" alt="" fill sizes="(max-width: 800px) 100vw, 1100px" aria-hidden="true" />
+        <div className="ecoSystemCopy">
+          <div className="ecoSignal"><span /> ECOSYSTEM ONLINE</div>
+          <div className="ecoIntroCopy"><Cpu size={34}/><div><h2>Everything connects here.</h2><p>UTECH is the headquarters. Each division has a purpose, but they share the same foundation.</p></div></div>
+        </div>
+        <div className="ecoFlowLabel">ONE FOUNDATION · FOUR DIVISIONS</div>
+      </div>
+      <div className="ecoGrid">
+        {ecosystem.map(({icon: Icon, ...item})=><Link className="ecoCard" href={item.href} key={item.title}>
+          <div className="ecoCardTop"><span>{item.number}</span><small>{item.tag}</small></div>
+          <div className="ecoCardIcon"><Icon size={21}/></div>
+          <h3>{item.title}</h3>
+          <p>{item.text}</p>
+          <div className="ecoCardAction"><b>{item.action}</b><ArrowRight size={16}/></div>
+        </Link>)}
+      </div>
+    </section>
     <section className="coreSection">
       <div className="coreHeader">
         <div className="sectionLabel">04 / UTECH CORE</div>
