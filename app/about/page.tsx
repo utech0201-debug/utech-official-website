@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, BrainCircuit, Code2, Globe2, ShieldCheck, Sparkles } from "lucide-react";
-import BackLink from "@/components/layout/BackLink";
+import { BackLink } from "@/components/layout/BackLink";
 import Footer from "@/components/layout/Footer";
 
 const values = [

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowUpRight, Code2, ShieldCheck, Store, GraduationCap } from "lucide-react";
-import BackLink from "@/components/layout/BackLink";
+import { BackLink } from "@/components/layout/BackLink";
 import Footer from "@/components/layout/Footer";
 
 const projects = [
